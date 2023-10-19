@@ -1,0 +1,207 @@
+@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light);
+
+div.board,
+div#react-container {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: #f7f7f7; /* Light grey background */
+}
+
+.board-title{
+  z-index: 9999;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+div.board {
+    width: 100%;
+    background: #3498db; /* Blue background */
+}
+
+div.note {
+    height: 150px;
+    width: 150px;
+    background-color: #f39c12; /* Orange note color */
+    margin: 2px 0;
+    position: absolute;
+    cursor: -webkit-grab;
+    -webkit-box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, .2);
+    box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, .2);
+    overflow: hidden;
+}
+
+div.note:active {
+    cursor: -webkit-grabbing;
+}
+
+div.note p {
+    font-size: 22px;
+    padding: 5px;
+    font-family: 'Shadows Into Light';
+    font-style: normal;
+}
+
+div .note .edit {
+    opacity: 1;
+}
+
+div .note .edit:hover {
+    opacity: 1;
+}
+
+div.note:hover > span {
+    opacity: 1;
+}
+
+div.note > span {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    opacity: 0;
+    transition: opacity .25s linear;
+}
+
+div.note button {
+    margin: 2px;
+}
+
+div.note > textarea {
+    height: 90px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.textarea-form-control {
+  width: 100%;
+  height: 120px; /* Adjust the height as per your design */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  background-color: #f39c12 ;
+  font-family: 'Shadows Into Light';
+  border-radius: 5px;
+  resize: vertical; /* Allows vertical resizing */
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+  margin-bottom: 10px; /* Optional: Add margin bottom for spacing */
+  font-family: Arial, sans-serif; /* Optional: Define preferred font family */
+  color: #333; /* Optional: Define text color */
+}
+
+.textarea-form-control:focus {
+  outline: none; /* Remove the default focus outline */
+  border-color: #007bff; /* Set border color when the textarea is focused */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Optional: Add a subtle box shadow on focus */
+}
+
+
+.custom-btn {
+    width: 200px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: #2ecc71; /* Green button color */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
+                7px 7px 20px 0px rgba(0,0,0,.1),
+                4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.btn-2 {
+  background: #bbff00; /* Light green button gradient */
+  border: none;
+}
+
+.btn-2:before {
+  height: 0%;
+  width: 2px;
+}
+
+.btn-2:active {
+  box-shadow:  4px 4px 6px 0 rgba(255, 217, 1, 0.5),
+              -4px -4px 6px 0 rgba(116, 125, 136, .5), 
+              inset -4px -4px 6px 0 rgba(255,255,255,.2),
+              inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+}
+
+
+.custom-btn-edit {
+  position: fixed;
+  width: 60px;
+  color: #fff;
+  border-radius: 5px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: #2ecc5d; /* Green button color */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
+              7px 7px 20px 0px rgba(0,0,0,.1),
+              4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+  top: 80%;
+  left: 55%;
+  opacity: 0;
+}
+
+.custom-btn-save {
+  width: 60px;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: 500;
+  background: #1eff00; 
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
+              7px 7px 20px 0px rgba(0,0,0,.1),
+              4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+  top: -18px;
+  left: 55%;
+  opacity: 1;
+}
+.note:hover .custom-btn-edit {
+  opacity: 1;
+}
+
+.btn-edit {
+  background-color: #89d8d3;
+background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
+  border: none;
+  z-index: 1;
+}
+
+.btn-edit:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 5px;
+   background-color: #4dccc6;
+background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+  box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001;
+  transition: all 0.3s ease;
+}

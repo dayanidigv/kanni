@@ -1,0 +1,359 @@
+html,
+body {
+  background-color: transparent;
+  font-family: 'Quicksand';
+}
+
+.textcontainer {
+  position: relative;
+  font-size: 24px;
+  color: #333;
+}
+
+.particletext.lines > .particle {
+  position: absolute;
+  background-color: rgba(0, 64, 255, 0.5);
+  animation: lines 3s linear infinite;
+}
+
+@keyframes lines {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.intro {
+  position: fixed;
+  z-index: 9999;
+  display: flex;
+  opacity: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #00000000;
+}
+
+.intro svg {
+  background-color: white;
+}
+
+.strong {
+  font-size: 2rem;
+  font-family: 'comfortaa';
+  text-align: center;
+  position: relative;
+}
+.strong::first-letter {
+  color:  #ff0073; 
+}
+
+.strong::after {
+  content: "";
+  width: 50%;
+  height: 20px;
+  background-image: url(../svg/underline.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.secondaryStrong {
+  font-size: 2rem;
+  font-family: 'comfortaa';
+  text-align: center;
+  position: relative;
+}
+.secondaryStrong::first-letter {
+  color:  #ff0073; 
+}
+
+.secondaryStrong::after {
+  content: "";
+  width: 50%;
+  height: 20px;
+  background-image: url(../svg/underline.svg);
+  background-position: center;
+  background-size: contain;
+  filter:hue-rotate(100deg);
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.thirdStrong {
+  font-size: 20px;
+  font-family: 'comfortaa';
+  position: relative;
+  font-style: oblique;
+}
+.thirdStrong::first-letter {
+  color:  #ff0073; 
+}
+
+
+
+/* Navbar.css */
+
+/* Media query for mobile screens */
+@media (max-width: 750px) {
+  .secondaryStrong {
+    font-size: 1rem;
+    font-family: 'comfortaa';
+    text-align: center;
+    position: relative;
+  }
+  .Navbar {
+    position: fixed;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 50px;
+    bottom: 2vh;
+    width: 90%;
+    opacity: 0;
+    left: 53%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 20px;
+    transition: all 0.3s ease;
+    z-index: 9999;
+  }
+
+  .navicon {
+    width: 50px;
+    height: 50px;
+    /* Increased height for better touch target */
+    border-radius: 50%;
+    text-align: center;
+    transform: scale(0.8);
+    font-size: 25px;
+    line-height: 50px;
+    /* Center the icon vertically */
+    background-color: black;
+    transition: all 0.3s ease;
+    /* Smooth transition effect */
+  }
+
+ .navicon .label {
+  display: none;
+  position: absolute;
+  left: 50%; /* Position the label in the center of the .navicon */
+  bottom: -35px; /* Adjust the distance from the .navicon */
+  transform: translateX(-50%);
+  background-color: #000000c4;
+  color: white;
+  padding: 0px 10px 0px 10px;
+    border-radius: 5px;
+  font-size: 1rem;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.navicon:hover .label {
+  opacity: 1;
+  bottom: 55px; 
+  display: block;
+}
+
+  .navicon:hover {
+    background-color: #859cff;
+    /* Change background color on hover */
+    transform: scale(1);
+    /* Increase size on hover */
+    border-radius: 50%;
+    /* Ensure border-radius stays the same on hover */
+  }
+
+  .navicon:active {
+    background-color: #002fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: scale(1);
+    transform: translateY(-3vh);
+    /* Increase size on hover */
+    border-radius: 50%;
+    /* Ensure border-radius stays the same on hover */
+  }
+
+  .Navbar .active {
+    background-color: #002fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: scale(1);
+    transform: translateY(-3vh);
+    border-radius: 50%;
+  }
+
+}
+
+/* Media query for System screens */
+@media (min-width: 750px) {
+  .Navbar {
+    position: fixed;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 50px;
+    right: 2vh;
+    opacity: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 30px;
+    color: white;
+    text-align: center;
+    align-items: center;
+    padding: 0 20px;
+    transition: all 0.3s ease;
+    z-index: 9999;
+  }
+
+  .navicon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transform: scale(0.8);
+    text-align: center;
+    align-items: center;
+    transform: scale(0.8);
+    font-size: 25px;
+    margin-left: -20px;
+    line-height: 50px;
+    background-color: black;
+    transition: all 0.3s ease;
+  }
+
+  .navicon .label {
+    display: none;
+    position: absolute;
+    left: -100px;
+    font-size: 1rem;
+    top: 50%;
+    background-color: #000000c4;
+    color: white;
+    padding: 0px 10px 0px 10px;
+    border-radius: 5px;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+
+  /* Show label on hover */
+  .navicon:hover .label {
+    display: block;
+  }
+
+  .navicon:hover {
+    background-color: #859cff;
+    transform: scale(1);
+    border-radius: 50%;
+  }
+
+  .navicon:active {
+    background-color: #002fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: scale(1);
+    transform: translateX(-3vh);
+    /* Increase size on hover */
+    border-radius: 50%;
+    /* Ensure border-radius stays the same on hover */
+  }
+
+  .Navbar .active {
+    background-color: #002fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: scale(1);
+    transform: translateX(-3vh);
+    /* Increase size on hover */
+    border-radius: 50%;
+    /* Ensure border-radius stays the same on hover */
+  }
+
+  .Navbar .navicon .icon {
+    margin-bottom: 5px;
+  }
+
+  
+  .secondaryStrong {
+    font-size: 2rem;
+    font-family: 'comfortaa';
+    text-align: center;
+    position: relative;
+  }
+
+}
+
+.pagecontent {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.home-text {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.welcomemsg {
+  color: #002fff;
+  font-size: 3rem;
+  text-shadow: 0 0 10px #007bff, 0 0 20px #007bff;
+
+}
+
+.word {
+  display: inline-block;
+  margin: 0 5px;
+  transform-origin: bottom center;
+  transform: scaleY(0);
+  animation: fadeInWord 0.8s forwards ease-out;
+}
+
+.letter {
+  color: #ff0073;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ebebeb;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #6d6d6d; 
+  cursor: pointer;
+}
+
+
+.canvas-webgl{
+    position: fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
+    max-width: 100vw;
+    max-height: 100vh;
+    z-index: -2;
+  }
+  

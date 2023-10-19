@@ -1,0 +1,194 @@
+.footer {
+    height: 100%;
+    --footer-background: rgb(0, 0, 0);
+    min-height: 12rem;
+    color: #F5F7FA;
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+    position: relative;
+    background-color:var(--footer-background);
+}
+
+.bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1rem;
+    background: var(--footer-background);
+    filter: url("#blob");
+}
+
+.bubble {
+    position: absolute;
+    left: var(--position, 50%);
+    background: var(--footer-background);
+    border-radius: 100%;
+    animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s),
+        bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+    transform: translate(-50%, 100%);
+}
+
+.footer .content {
+    z-index: 2;
+    background: var(--footer-background);
+}
+
+@keyframes bubble-size {
+    0%, 75% {
+        width: var(--size, 2rem);
+        height: var(--size, 2rem);
+    }
+
+    100% {
+        width: 0rem;
+        height: 0rem;
+    }
+}
+
+@keyframes bubble-move {
+    0% {
+        bottom: -4rem;
+    }
+
+    100% {
+        bottom: var(--distance, 10rem);
+    }
+}
+
+/* Footer Content Styles */
+.footer-cta,
+.footer-content {
+    color: #ffffff;
+    padding: 1rem 0;
+}
+
+.single-cta i {
+    color: #ff0073;
+    font-size: 15px;
+    float: center;
+}
+
+.cta-text h4 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.cta-text span {
+    color: #f2f2f2;
+    font-size: 15px;
+}
+
+.footer-logo img {
+    max-width: 200px;
+}
+
+.footer-logo .companyname{
+    color: yellow;
+}
+
+.companyname:first-child{
+    color: yellow;
+}
+
+.footer-text p {
+    margin-bottom: 14px;
+    font-size: 14px;
+    color: #c5c5c5;
+    line-height: 28px;
+}
+.footer-social-icon a {
+    color: #fff;
+    background-color: #202020;
+    font-size: 16px;
+    margin-right: 15px;
+    border-radius: 50%; /* Adjusted border-radius for a circular button */
+    display: inline-flex; /* Ensures the button elements are displayed in a row */
+    align-items: center; /* Aligns items vertically in the center */
+    justify-content: center; /* Aligns items horizontally in the center */
+    width: 40px; /* Set a fixed width for the circular button */
+    height: 40px; /* Set a fixed height for the circular button */
+    text-align: center; /* Centers the text horizontally */
+    text-decoration: none; /* Removes underline from links */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.1); /* Updated shadow color */
+}
+
+.footer-social-icon a:hover {
+    background-color: #fff; /* Change background color on hover */
+    color: #202020; /* Change text color on hover */
+}
+
+
+.footer-social-icon i {
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 50%;
+    background: rgba(234, 233, 233, 0.201);
+    backdrop-filter: blur(10px);
+    box-shadow: 10px 20px 30px rgba(0, 0, 0, 0.15);
+}
+
+.footer-social-icon i:hover {
+   transform: scale(1.2);
+   box-shadow: #202020 10px;
+}
+
+.fa-facebook-f{
+    
+    color: #3b5998;
+}
+.fa-facebook-f:hover{
+    text-shadow: 0 0 10px  #3b5998, 0 0 20px  #3b5998;
+}
+
+.fa-instagram{
+    color:#962fbf;
+}
+.fa-instagram:hover{
+    text-shadow: 0 0 10px #962fbf, 0 0 20px #962fbf;
+}
+
+.fa-linkedin{
+    color:#0072b1;
+}
+.fa-linkedin:hover{
+    text-shadow: 0 0 10px #0072b1, 0 0 20px #0072b1;
+}
+
+.fa-twitter{
+    color:#00acee;
+}
+.fa-twitter:hover{
+    text-shadow: 0 0 10px #00acee, 0 0 20px #00acee;
+}
+
+/* Copyright Area Styles */
+.copyright-area {
+    background: #202020; /* Change to the desired background color */
+    padding: 25px 0;
+}
+
+.copyright-text p {
+    margin: 0;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.footer-menu li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.footer-menu li a:hover {
+    color: #ff0073;
+   
+}
